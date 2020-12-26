@@ -106,6 +106,8 @@ class ViewController: UIViewController {
         imageView.image = images[nowIndex]
     }
     
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+    }
     
 }
 

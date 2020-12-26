@@ -23,9 +23,6 @@ class secondViewController: UIViewController {
     @IBOutlet weak var uiView: UIImageView!
     
     
-    @IBAction func unWind(_ segue:UIStoryboardSegue){
-        
-    }
     
     /*
     // MARK: - Navigation

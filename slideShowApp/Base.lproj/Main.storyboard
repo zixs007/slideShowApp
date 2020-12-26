@@ -12,11 +12,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="slideShowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmC-5T-1iU">
-                                <rect key="frame" x="199.5" y="693" width="15" height="22"/>
+                                <rect key="frame" x="199.5" y="720" width="15" height="22"/>
                                 <accessibility key="accessibilityConfiguration" identifier="sstart"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" image="play.fill" catalog="system"/>
@@ -25,7 +25,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbU-Ty-PSe">
-                                <rect key="frame" x="114.5" y="693" width="25" height="22"/>
+                                <rect key="frame" x="114.5" y="720" width="25" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" image="backward.fill" catalog="system"/>
                                 <connections>
@@ -33,7 +33,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p2m-1I-SvB">
-                                <rect key="frame" x="25" y="239" width="364" height="364"/>
+                                <rect key="frame" x="25" y="266" width="364" height="364"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="364" id="Vyb-aZ-V7z"/>
@@ -43,7 +43,7 @@
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fvm-Yl-Pw3">
-                                <rect key="frame" x="274.5" y="693" width="25" height="22"/>
+                                <rect key="frame" x="274.5" y="720" width="25" height="22"/>
                                 <state key="normal" image="forward.fill" catalog="system"/>
                                 <connections>
                                     <action selector="forwardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P6K-8K-rf3"/>
@@ -103,7 +103,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="hGR-2a-2Fl"/>
+                                    <segue destination="rpr-BB-4fX" kind="unwind" unwindAction="unwind:" id="CGc-hQ-Nob"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -121,6 +121,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d7F-cD-Bx4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="rpr-BB-4fX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="828.98550724637687" y="114.50892857142857"/>
         </scene>
