@@ -29,13 +29,15 @@ class ViewController: UIViewController {
         let getSecond:secondViewController = segue.destination as! secondViewController
         getSecond.image = imageView.image
         self.present(getSecond, animated: true, completion: nil)
-        timer.invalidate()
-        timer = nil
-        ssButton.setImage(playImage, for: .normal)
-        bbButton.isEnabled = true
-        ffButton.isEnabled = true
-        
+          if timer != nil {
+                  timer.invalidate()
+                  timer = nil
+                  ssButton.setImage(playImage, for: .normal)
+                  bbButton.isEnabled = true
+                  ffButton.isEnabled = true
+        }
     }
+    
     
     
     @IBOutlet weak var imageView: UIImageView!
