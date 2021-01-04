@@ -23,7 +23,10 @@ class ViewController: UIViewController {
         imageView.image = image3
         imageView.isUserInteractionEnabled = true
         
+       
     }
+    
+  
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let getSecond:secondViewController = segue.destination as! secondViewController
@@ -52,7 +55,8 @@ class ViewController: UIViewController {
     let image3 = UIImage(named:("image-3"))
     let image4 = UIImage(named:("image-4"))
     let image5 = UIImage(named:("image-5"))
-    
+     
+
     let pauseImage = UIImage(systemName: "pause.fill")
     let playImage = UIImage(systemName: "play.fill")
     
@@ -76,32 +80,35 @@ class ViewController: UIViewController {
     }
     
     
+    
+   
+  
+   lazy var imases = [image3,image4,image5]
+   
+            
+    
+    
+   var index = 0
+    
     @IBOutlet weak var ffButton: UIButton!
     @IBAction func forwardButton(_ sender: Any) {
-        if nowIndex == 0 {
-            imageView.image = image4
-            nowIndex += 1
-        }else if nowIndex == 1{
-            imageView.image = image5
-            nowIndex += 1
-        } else{
-            imageView.image = image3
-            nowIndex = 0
+       if index == 2{
+            index = 0
+            imageView.image = imases[index]
+       }else{
+        index += 1
+        imageView.image = imases[index]
         }
-        
     }
     
     @IBOutlet weak var bbButton: UIButton!
     @IBAction func backButton(_ sender: Any) {
-        if nowIndex == 0 {
-            imageView.image = image5
-            nowIndex = 2
-        }else if nowIndex == 1 {
-            imageView.image = image3
-            nowIndex = 0
-        }else {
-            imageView.image = image4
-            nowIndex = 1
+        if index == 0 {
+            index = 2
+            imageView.image = imases[index]
+        }else{
+            index -= 1
+            imageView.image = imases[index]
         }
     }
     
